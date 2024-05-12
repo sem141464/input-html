@@ -1,0 +1,16 @@
+<div>
+  <form name="calc">
+    <input type="number" id="value1"> + <input type="number" id="value2"><br>
+    <input type="submit">
+  </form>
+  <input id="output" disabled>
+</div>
+<script>
+  document.forms.calc.onsubmit = function() {
+    out = document.QuerySelector("#output");
+    v1 = document.getElementById("#value1").value;
+    v2 = document.getElementById("#value2").value;
+
+    out.value = v1 + v2;
+  };
+</script>
