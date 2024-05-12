@@ -1,0 +1,18 @@
+<div>
+	<form name="publish">
+		<input type="text" name="message" placeholder="Введите вопрос"/>
+		<input type="submit" value="Отправить"/>
+	</form>
+	Вы ввели:<br>
+	<input id="out" disabled>
+</div>
+<script>
+document.forms.publish.onsubmit = function() {
+  var message = this.message.value;
+  inp = prompt(message);
+  const inputElement = document.querySelector('#out');
+  inputElement.value = inp;
+  return false;
+};
+
+</script>
